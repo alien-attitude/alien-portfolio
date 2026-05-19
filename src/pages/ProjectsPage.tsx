@@ -64,14 +64,19 @@ export function ProjectsPage() {
               once: true
             }}
             className="lg:col-span-8 bg-navy-light rounded-xl border border-white/5 overflow-hidden group flex flex-col">
-            
-            <div className="h-64 w-full bg-gradient-to-br from-[#1a2332] to-[#0b1121] relative overflow-hidden border-b border-white/5">
+
+            <div className="h-56 sm:h-64 w-full bg-gradient-to-br from-[#1a2332] to-[#0b1121] relative overflow-hidden border-b border-white/5">
               {/* Dashboard placeholder */}
               <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent"></div>
-              <div className="absolute top-8 left-8 right-8 bottom-0 bg-[#0b1121] rounded-t-lg border border-white/10 shadow-2xl flex flex-col">
-                <img src="/talent-scout.png" className="rounded-t-lg " alt="TalentScout Dashboard"/>
+              <div className="absolute top-8 left-4 right-4 sm:left-8 sm:right-8 bottom-0 bg-[#0b1121] rounded-t-lg border border-white/10 shadow-2xl overflow-hidden">
+                <img
+                    src="/talent-scout.png"
+                    className="block w-full h-full object-cover object-top rounded-t-lg"
+                    alt="TalentScout Dashboard"
+                />
               </div>
             </div>
+
 
             <div className="p-8 flex-1 flex flex-col">
               <div className="flex flex-wrap gap-2 mb-6">
