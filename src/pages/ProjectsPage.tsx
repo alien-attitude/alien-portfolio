@@ -69,7 +69,7 @@ export function ProjectsPage() {
               {/* Dashboard placeholder */}
               <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent"></div>
               <div className="absolute top-8 left-8 right-8 bottom-0 bg-[#0b1121] rounded-t-lg border border-white/10 shadow-2xl flex flex-col">
-                <img src="/src/public/talent-scout.png" className="rounded-t-lg " alt="TalentScout Dashboard"/>
+                <img src="/talent-scout.png" className="rounded-t-lg " alt="TalentScout Dashboard"/>
               </div>
             </div>
 

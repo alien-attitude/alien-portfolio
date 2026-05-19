@@ -73,7 +73,7 @@ export function AboutPage() {
           {/* Profile Photo Placeholder */}
           <div className="aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 relative bg-gradient-to-t from-navy-light to-navy">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent opacity-60"></div>
-            <img src="/src/public/image.png" alt="Profile" className="w-full h-full object-cover"/>
+            <img src="/image.png" alt="Profile" className="w-full h-full object-cover"/>
           </div>
           {/* Decorative frame */}
           <div className="absolute -inset-4 border border-accent/20 rounded-2xl -z-10 translate-x-4 translate-y-4"></div>
