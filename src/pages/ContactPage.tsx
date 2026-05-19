@@ -266,7 +266,9 @@ export function ContactPage() {
               <div className="bg-navy-light border border-white/5 rounded-xl p-6 flex flex-col justify-center">
                 <AtSign size={20} className="text-accent mb-4" />
                 <h4 className="text-white font-medium text-sm mb-1">Email</h4>
-                <p className="text-gray-500 text-xs">{CONTACT_EMAIL}</p>
+                <p className="text-gray-500 text-[9px] sm:text-xs break-all leading-relaxed">
+                  {CONTACT_EMAIL}
+                </p>
               </div>
               <div className="bg-navy-light border border-white/5 rounded-xl p-6 flex flex-col justify-center">
                 <Phone size={20} className="text-accent mb-4" />
