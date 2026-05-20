@@ -1,5 +1,10 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Globe,
+  CalendarCheck,
+  MessageCircle,
+  Bot,
+  CreditCard,
+  LayoutDashboard } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { RESUME_DOWNLOAD_NAME, RESUME_URL } from '../constants';
 export function HomePage() {
@@ -256,6 +261,133 @@ export function HomePage() {
             </motion.div>
           </div>
         </div>
+      </section>
+
+      {/* Services Intro Section */}
+      <section className="py-20 md:py-28 px-6 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left: Heading + CTA */}
+            <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 20
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0
+                }}
+                viewport={{
+                  once: true
+                }}
+                className="lg:col-span-5">
+
+              <div className="inline-flex items-center space-x-2 bg-navy-light border border-white/10 rounded-full px-3 py-1.5 mb-6">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                <span className="text-xs font-mono text-accent font-medium tracking-wider">
+                  WHAT_I_BUILD
+                </span>
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-bold font-display text-white mb-5 leading-tight">
+                Solutions that <span className="text-accent">scale</span> with
+                your business.
+              </h2>
+
+              <p className="text-gray-400 text-base md:text-lg mb-8 leading-relaxed">
+                From websites and booking systems to AI chatbots and CRMs. I
+                design and ship production-grade digital products tailored to
+                your needs.
+              </p>
+
+              <Link
+                  to="/services"
+                  className="inline-flex items-center justify-center px-6 py-3.5 bg-accent text-navy font-medium rounded-sm hover:bg-accent-hover transition-colors w-full sm:w-auto group">
+
+                EXPLORE ALL SERVICES
+                <ArrowRight
+                    size={18}
+                    className="ml-2 group-hover:translate-x-1 transition-transform" />
+
+              </Link>
+            </motion.div>
+
+            {/* Right: Quick service grid preview */}
+            <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 20
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0
+                }}
+                viewport={{
+                  once: true
+                }}
+                transition={{
+                  delay: 0.15
+                }}
+                className="lg:col-span-7">
+
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+                {[
+                  {
+                    icon: Globe,
+                    label: 'Website Development'
+                  },
+                  {
+                    icon: CalendarCheck,
+                    label: 'Booking Systems'
+                  },
+                  {
+                    icon: MessageCircle,
+                    label: 'WhatsApp Integration'
+                  },
+                  {
+                    icon: Bot,
+                    label: 'AI Chatbots'
+                  },
+                  {
+                    icon: CreditCard,
+                    label: 'Payment Integration'
+                  },
+                  {
+                    icon: LayoutDashboard,
+                    label: 'Admin Portals'
+                  }].
+                map((item) => {
+                  const Icon = item.icon;
+                  return (
+                      <Link
+                          key={item.label}
+                          to="/services"
+                          className="group bg-navy-light border border-white/5 rounded-xl p-4 md:p-5 hover:border-accent/30 transition-all duration-300 flex flex-col items-start">
+
+                        <div className="w-9 h-9 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                          <Icon size={16} className="text-accent" />
+                        </div>
+                        <div className="text-white text-sm font-medium leading-snug">
+                          {item.label}
+                        </div>
+                      </Link>);
+
+                })}
+              </div>
+
+              {/* Mobile-friendly "more services" hint */}
+              <Link
+                  to="/services"
+                  className="mt-4 inline-flex items-center text-sm text-gray-400 hover:text-accent transition-colors font-mono">
+
+                + 3 more services <ArrowRight size={14} className="ml-1.5" />
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Subtle background glow */}
+        <div className="absolute top-1/2 right-0 w-96 h-96 bg-accent/5 blur-[120px] -z-10 rounded-full pointer-events-none" />
       </section>
 
       {/* CTA Section */}

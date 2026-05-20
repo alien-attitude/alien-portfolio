@@ -7,22 +7,26 @@ export function Navbar() {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navLinks = [
-  {
-    name: 'Home',
-    path: '/'
-  },
-  {
-    name: 'Projects',
-    path: '/projects'
-  },
-  {
-    name: 'About',
-    path: '/about'
-  },
-  {
-    name: 'Contact',
-    path: '/contact'
-  }];
+    {
+      name: 'HOME',
+      path: '/'
+    },
+    {
+      name: 'SERVICES',
+      path: '/services'
+    },
+    {
+      name: 'PROJECTS',
+      path: '/projects'
+    },
+    {
+      name: 'ABOUT',
+      path: '/about'
+    },
+    {
+      name: 'CONTACT',
+      path: '/contact'
+    }];
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
