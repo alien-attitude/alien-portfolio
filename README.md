@@ -8,8 +8,22 @@ A modern developer portfolio built with **React + TypeScript + Vite**, styled wi
 - Multi-page portfolio with routing:
   - Home
   - About
+  - Services
   - Projects
   - Contact
+- Home page with an introduction to available services
+- Dedicated services page featuring:
+  - Website development
+  - Booking systems
+  - WhatsApp integration
+  - CRM setup
+  - Payment integration
+  - Admin portals
+  - Email automation
+  - AI chatbots
+  - School portals
+- Service category filtering for easier browsing
+- Smooth scroll-to-top behavior on route changes
 - Responsive UI and modern dark theme
 - Animated interactions using Framer Motion
 - Contact form with:
@@ -17,7 +31,7 @@ A modern developer portfolio built with **React + TypeScript + Vite**, styled wi
   - Loading state on submit
   - Inline toast feedback (success/error)
 - Resume download support
-- Reusable components (Navbar, Footer, etc.)
+- Reusable components including Navbar, Footer, and ScrollToTop
 
 ## Tech Stack
 
@@ -37,7 +51,15 @@ my-portfolio-website/
 ├── public/
 ├── src/
 │   ├── components/
+│   │   ├── Footer.tsx
+│   │   ├── Navbar.tsx
+│   │   └── ScrollToTop.tsx
 │   ├── pages/
+│   │   ├── AboutPage.tsx
+│   │   ├── ContactPage.tsx
+│   │   ├── HomePage.tsx
+│   │   ├── ProjectsPage.tsx
+│   │   └── ServicesPage.tsx
 │   ├── App.tsx
 │   ├── constants.ts
 │   ├── index.css
@@ -85,10 +107,10 @@ VITE_EMAILJS_PUBLIC_KEY=your_public_key
 ## EmailJS Setup (No Backend)
 
 1. Create an EmailJS account.
-2. Add an email service (Gmail/Outlook/etc.).
-3. Create your templates (Contact/Auto-Reply as needed).
-4. Copy Service ID, Template ID, and Public Key into `.env`.
-5. Ensure template variables match your form payload (e.g. `from_name`, `from_email`, `subject`, `message`).
+2. Add an email service, such as Gmail or Outlook.
+3. Create your templates for contact messages and optional auto-replies.
+4. Copy your Service ID, Template ID, and Public Key into `.env`.
+5. Ensure template variables match your form payload, such as `from_name`, `from_email`, `subject`, and `message`.
 
 ## Scripts
 ```
@@ -104,7 +126,7 @@ This app can be deployed on platforms like:
 
 - Vercel
 - Netlify
-- GitHub Pages (with Vite-compatible setup)
+- GitHub Pages with a Vite-compatible setup
 
 Make sure deployment environment variables are also configured.
 
